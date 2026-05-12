@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI & IT Jobs Research Chatbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-left">
+      <div class="bot-avatar">🤖</div>
+      <div class="header-info">
+        <h1>AI & IT Jobs Research Bot</h1>
+        <span class="status"><span class="status-dot"></span>Online · Groq AI</span>
+      </div>
+    </div>
+    <div class="research-badge">📚 MSc CS · SPPU 2025-26</div>
+  </header>
+
+  <div class="chat-container">
+    <div class="messages" id="messages">
+      <div class="message bot-msg">
+        <div class="msg-avatar">🤖</div>
+        <div class="msg-bubble">
+          <p>👋 <strong>Namaste!</strong> Main hoon AI Research Assistant for the project:</p>
+          <blockquote>
+            "Research On Impact of Artificial Intelligence on IT Jobs"
+            <br/><small>— Chirag Wani & Pratik Bajode · MSc CS · SPPU · Guide: Prof. Rushi Durge Sir</small>
+          </blockquote>
+          <p>Kuch bhi pooch sakte ho! Try karo:</p>
+          <div class="quick-topics">
+            <button class="chip" onclick="sendQuick('Which IT jobs are at risk due to AI?')">🔴 Jobs at Risk</button>
+            <button class="chip" onclick="sendQuick('What new jobs is AI creating in IT?')">🟢 New AI Jobs</button>
+            <button class="chip" onclick="sendQuick('What skills should I learn for AI era?')">📚 Skills to Learn</button>
+            <button class="chip" onclick="sendQuick('What are the key statistics from your research?')">📊 Key Stats</button>
+            <button class="chip" onclick="sendQuick('How is AI impacting Indian IT sector?')">🇮🇳 India & AI</button>
+            <button class="chip" onclick="sendQuick('What salary can I expect with AI skills?')">💰 AI Salaries</button>
+            <button class="chip" onclick="sendQuick('What is the conclusion of your research?')">✅ Conclusion</button>
+            <button class="chip" onclick="sendQuick('What does PwC 2025 say about AI jobs?')">📈 PwC Report</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="input-area">
+    <div class="input-wrapper">
+      <textarea
+        id="userInput"
+        placeholder="Ask anything about AI impact on IT jobs..."
+        rows="1"
+        onkeydown="handleKey(event)"
+        oninput="autoResize(this)"
+      ></textarea>
+      <button id="sendBtn" onclick="sendMessage()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+    <p class="disclaimer">
+      Research by Chirag Wani & Pratik Bajode · Java Spring Boot + Groq Api (Free)
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
